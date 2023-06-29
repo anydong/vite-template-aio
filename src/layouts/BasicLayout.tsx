@@ -1,14 +1,23 @@
-import { ProConfigProvider } from "@ant-design/pro-components";
+import {
+  ProConfigProvider,
+  ProLayout,
+  ProLayoutProps,
+} from "@ant-design/pro-components";
 import { ConfigProvider } from "antd";
 import zhCn from "antd/locale/zh_CN";
 import { ReactElement } from "react";
 import { Outlet } from "react-router-dom";
 
 const BasicLayout = (): ReactElement => {
+  const proLayoutProps: ProLayoutProps = {
+    title: "Admin Panel",
+  };
   return (
     <ProConfigProvider>
       <ConfigProvider locale={zhCn}>
-        <Outlet />
+        <ProLayout {...proLayoutProps}>
+          <Outlet />
+        </ProLayout>
       </ConfigProvider>
     </ProConfigProvider>
   );
