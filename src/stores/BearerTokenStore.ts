@@ -2,7 +2,7 @@ import { create } from "zustand";
 
 type BearerToken = {
   token: string;
-  expiresAt: Date;
+  expiresAt?: Date;
 };
 
 interface UseBearerTokenStoreI {
