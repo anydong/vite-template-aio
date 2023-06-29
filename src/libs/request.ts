@@ -1,15 +1,16 @@
 import axios from "axios";
 
-import useBearerTokenStore from "../stores/BearerTokenStore";
+import useAccessTokenStore from "../stores/AccessTokenStore";
 
 const client = axios.create({});
 
 // Add a request interceptor
 axios.interceptors.request.use(
   (config) => {
-    const bearerToken = useBearerTokenStore.getState().bearerToken;
-    if (bearerToken !== undefined && bearerToken !== null) {
-      config.headers.post["Authorization"] = `Bearer ${bearerToken.token}`;
+    const accessToken = useAccessTokenStore.getState().accessToken;
+    if (accessToken !== undefined && accessToken !== null) {
+      config.headers.post["Authorization"] = `Bearer ${accessToken.token}`;
+      config.params.get["access_token"] = accessToken.token;
     }
     return config;
   },
