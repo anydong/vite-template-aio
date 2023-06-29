@@ -1,14 +1,14 @@
 import { create } from "zustand";
-import { persist, createJSONStorage } from "zustand/middleware";
+import { createJSONStorage, persist } from "zustand/middleware";
 
-type AccessToken = {
+interface AccessTokenI {
   token: string;
   expiresAt?: Date;
-};
+}
 
 interface UseAccessTokenStoreI {
-  accessToken?: AccessToken;
-  setAccessToken: (accessToken: AccessToken) => void;
+  accessToken?: AccessTokenI;
+  setAccessToken: (accessToken: AccessTokenI) => void;
 }
 
 const useAccessTokenStore = create<UseAccessTokenStoreI>()(
