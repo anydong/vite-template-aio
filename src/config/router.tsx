@@ -7,7 +7,6 @@ import BasicLayout from "../layouts/BasicLayout";
 const App = lazy(() => import("../pages/App"));
 
 const LoginPage = lazy(() => import("../pages/auth/login"));
-const RegisterPage = lazy(() => import("../pages/auth/register"));
 
 const router = createBrowserRouter([
   {
@@ -27,10 +26,6 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <LoginPage />,
-      },
-      {
-        path: "register",
-        element: <RegisterPage />,
       },
     ],
   },
