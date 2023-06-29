@@ -4,7 +4,6 @@ import { RouterProvider } from "react-router-dom";
 
 import router from "./config/router.tsx";
 
-import "antd/dist/reset.css";
 import "./global.css";
 import "./libs/i18n.ts";
 
