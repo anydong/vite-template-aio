@@ -16,6 +16,7 @@ const AuthLayout = (): ReactElement => {
   };
   const proLayoutProps: ProLayoutProps = {
     title: "Admin Panel",
+    token: {},
   };
   return (
     <ProConfigProvider>
