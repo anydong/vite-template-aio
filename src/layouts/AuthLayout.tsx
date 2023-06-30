@@ -16,7 +16,6 @@ const AuthLayout = (): ReactElement => {
   };
   const proLayoutProps: ProLayoutProps = {
     title: "Admin Panel",
-    collapsedButtonRender: false,
   };
   return (
     <ProConfigProvider>
