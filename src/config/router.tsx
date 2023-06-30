@@ -1,14 +1,11 @@
-import { lazy } from "react";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouteObject } from "react-router-dom";
 
-import AuthLayout from "../layouts/AuthLayout";
-import BasicLayout from "../layouts/BasicLayout";
+import AuthLayout from "@/layouts/AuthLayout";
+import BasicLayout from "@/layouts/BasicLayout";
 
-const App = lazy(() => import("../pages/App"));
+import { App, LoginPage } from "@/pages";
 
-const LoginPage = lazy(() => import("../pages/auth/login"));
-
-const router = createBrowserRouter([
+const routes: RouteObject[] = [
   {
     path: "/",
     children: [
@@ -33,6 +30,7 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+];
 
+const router = createBrowserRouter(routes);
 export default router;
