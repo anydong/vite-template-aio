@@ -12,6 +12,8 @@ import { Outlet } from "react-router-dom";
 const BasicLayout = (): ReactElement => {
   const proSettings: ProSettings = {
     layout: "top",
+    fixedHeader: true,
+    suppressSiderWhenMenuEmpty: true,
   };
   const proLayoutProps: ProLayoutProps = {
     title: "Admin Panel",

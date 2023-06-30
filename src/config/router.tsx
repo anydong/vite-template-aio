@@ -11,13 +11,17 @@ const LoginPage = lazy(() => import("../pages/auth/login"));
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <BasicLayout />,
     children: [
       {
         index: true,
         element: <App />,
       },
     ],
+  },
+  {
+    path: "/",
+    element: <BasicLayout />,
+    children: [],
   },
   {
     path: "/",
