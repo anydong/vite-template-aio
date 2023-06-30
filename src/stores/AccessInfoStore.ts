@@ -25,7 +25,7 @@ const useAccessTokenStore = create<UseAccessInfoStore>()(
           return { accessInfo: undefined };
         }),
     }),
-    { name: "accessInfo", storage: createJSONStorage(() => localStorage) }
+    { name: "access_info", storage: createJSONStorage(() => localStorage) }
   )
 );
 
