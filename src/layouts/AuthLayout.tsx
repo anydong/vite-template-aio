@@ -17,6 +17,9 @@ const AuthLayout = (): ReactElement => {
   const proLayoutProps: ProLayoutProps = {
     title: "Admin Panel",
     token: {},
+    onPageChange: (location) => {
+      console.log(location);
+    },
   };
   return (
     <ProConfigProvider>
