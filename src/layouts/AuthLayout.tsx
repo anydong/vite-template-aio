@@ -12,9 +12,11 @@ const AuthLayout = (): ReactElement => {
   const proSettings: ProSettings = {
     layout: "top",
     fixedHeader: true,
+    suppressSiderWhenMenuEmpty: true,
   };
   const proLayoutProps: ProLayoutProps = {
     title: "Admin Panel",
+    collapsedButtonRender: false,
   };
   return (
     <ProConfigProvider>
