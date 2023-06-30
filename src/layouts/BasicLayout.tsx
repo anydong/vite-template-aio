@@ -6,10 +6,10 @@ import {
 } from "@ant-design/pro-components";
 import { ConfigProvider } from "antd";
 import zhCn from "antd/locale/zh_CN";
-import { ReactElement } from "react";
+import { FC } from "react";
 import { Outlet } from "react-router-dom";
 
-const BasicLayout = (): ReactElement => {
+const BasicLayout: FC = () => {
   const proSettings: ProSettings = {
     layout: "top",
     fixedHeader: true,
