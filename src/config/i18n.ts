@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import i18next, { InitOptions } from "i18next";
 import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
 import I18NextHttpBackend from "i18next-http-backend";
@@ -31,8 +32,14 @@ i18next.on("initialized", (options: InitOptions) => {
   console.log(options);
 });
 
-i18next.on("languageChanged", (lng) => {
+i18next.on("languageChanged", (lng: string) => {
   console.log(lng);
+  if (lng === undefined || lng === null || lng === "") {
+    return;
+  }
+  const lowerCaseLng = lng.toLocaleLowerCase();
+
+  dayjs.locale(lowerCaseLng);
 });
 
 export default i18next;
