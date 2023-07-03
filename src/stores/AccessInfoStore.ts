@@ -12,7 +12,7 @@ interface UseAccessInfoStore {
   removeAccessInfo: () => void;
 }
 
-const useAccessTokenStore = create<UseAccessInfoStore>()(
+const useAccessInfoStore = create<UseAccessInfoStore>()(
   persist(
     (set) => ({
       accessInfo: undefined,
@@ -29,4 +29,4 @@ const useAccessTokenStore = create<UseAccessInfoStore>()(
   )
 );
 
-export default useAccessTokenStore;
+export default useAccessInfoStore;
