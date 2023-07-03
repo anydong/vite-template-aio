@@ -1,4 +1,4 @@
-import i18n, { InitOptions } from "i18next";
+import i18next, { InitOptions } from "i18next";
 import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
 import I18NextHttpBackend from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
@@ -21,10 +21,18 @@ const initOptions: InitOptions = {
   },
 };
 
-i18n
+i18next
   .use(I18NextHttpBackend)
   .use(I18nextBrowserLanguageDetector)
   .use(initReactI18next) // passes i18n down to react-i18next
   .init(initOptions);
 
-export default i18n;
+i18next.on("initialized", (options: InitOptions) => {
+  console.log(options);
+});
+
+i18next.on("languageChanged", (lng) => {
+  console.log(lng);
+});
+
+export default i18next;
