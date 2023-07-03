@@ -3,7 +3,7 @@ import { createBrowserRouter, RouteObject } from "react-router-dom";
 import AuthLayout from "@/layouts/AuthLayout";
 import BasicLayout from "@/layouts/BasicLayout";
 
-import { App, LoginPage } from "@/pages";
+import { App, LoginPage } from "@/app";
 
 const routes: RouteObject[] = [
   {

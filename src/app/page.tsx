@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import dayjs from "dayjs";
 import reactLogo from "../assets/react.svg";
-import "./App.css";
+import "./page.module.css";
 import viteLogo from "/vite.svg";
 
 function App() {
