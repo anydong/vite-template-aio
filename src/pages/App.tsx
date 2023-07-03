@@ -13,6 +13,7 @@ function App() {
 
   useEffect(() => {
     console.log(dayjs.locale());
+    console.log(dayjs().weekday(-1));
   }, []);
 
   return (
@@ -37,7 +38,6 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <p>{dayjs.weekdays()}</p>
     </>
   );
 }
