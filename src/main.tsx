@@ -4,7 +4,8 @@ import { RouterProvider } from "react-router-dom";
 
 import router from "./config/router.tsx";
 
-import "./libs/i18n.ts";
+import "./config/dayjs.ts";
+import "./config/i18n.ts";
 
 import "antd/dist/reset.css";
 import "./global.css";

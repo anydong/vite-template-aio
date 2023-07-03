@@ -1,6 +1,9 @@
-import { InitOptions } from "i18next";
+import i18n, { InitOptions } from "i18next";
+import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
+import I18NextHttpBackend from "i18next-http-backend";
+import { initReactI18next } from "react-i18next";
 
-export const initOptions: InitOptions = {
+const initOptions: InitOptions = {
   backend: {
     // 網頁載入時去下載語言檔的位置
     loadPath: "/locales/{{lng}}/{{ns}}.json",
@@ -17,3 +20,11 @@ export const initOptions: InitOptions = {
     escapeValue: false, // react already safes from xss
   },
 };
+
+i18n
+  .use(I18NextHttpBackend)
+  .use(I18nextBrowserLanguageDetector)
+  .use(initReactI18next) // passes i18n down to react-i18next
+  .init(initOptions);
+
+export default i18n;
