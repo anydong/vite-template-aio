@@ -1,13 +1,13 @@
-import { createBrowserRouter, RouteObject } from "react-router-dom";
+import { createBrowserRouter, RouteObject } from 'react-router-dom';
 
-import AuthLayout from "@/layouts/AuthLayout";
-import BasicLayout from "@/layouts/BasicLayout";
+import AuthLayout from '@/layouts/AuthLayout';
+import BasicLayout from '@/layouts/BasicLayout';
 
-import { App, LoginPage } from "@/app";
+import { App, LoginPage } from '@/app';
 
 const routes: RouteObject[] = [
   {
-    path: "/",
+    path: '/',
     children: [
       {
         index: true,
@@ -16,16 +16,16 @@ const routes: RouteObject[] = [
     ],
   },
   {
-    path: "/",
+    path: '/',
     element: <BasicLayout />,
     children: [],
   },
   {
-    path: "/",
+    path: '/',
     element: <AuthLayout />,
     children: [
       {
-        path: "login",
+        path: 'login',
         element: <LoginPage />,
       },
     ],

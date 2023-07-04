@@ -1,21 +1,16 @@
-import {
-  ProConfigProvider,
-  ProLayout,
-  ProLayoutProps,
-  ProSettings,
-} from "@ant-design/pro-components";
-import { ConfigProvider } from "antd";
-import { FC } from "react";
-import { Outlet } from "react-router-dom";
+import { ProConfigProvider, ProLayout, ProLayoutProps, ProSettings } from '@ant-design/pro-components';
+import { ConfigProvider } from 'antd';
+import { FC } from 'react';
+import { Outlet } from 'react-router-dom';
 
 const AuthLayout: FC = () => {
   const proSettings: ProSettings = {
-    layout: "top",
+    layout: 'top',
     fixedHeader: true,
     suppressSiderWhenMenuEmpty: true,
   };
   const proLayoutProps: ProLayoutProps = {
-    title: "Admin Panel",
+    title: 'Admin Panel',
     token: {},
     onPageChange: (location) => {
       console.log(location);

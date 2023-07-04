@@ -1,22 +1,22 @@
-import dayjs from "dayjs";
-import i18next, { InitOptions } from "i18next";
-import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
-import I18NextHttpBackend from "i18next-http-backend";
-import { initReactI18next } from "react-i18next";
+import dayjs from 'dayjs';
+import i18next, { InitOptions } from 'i18next';
+import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
+import I18NextHttpBackend from 'i18next-http-backend';
+import { initReactI18next } from 'react-i18next';
 
 const initOptions: InitOptions = {
   backend: {
     // 網頁載入時去下載語言檔的位置
-    loadPath: "/locales/{{lng}}/{{ns}}.json",
+    loadPath: '/locales/{{lng}}/{{ns}}.json',
   },
   // lng: 'zh-Hans', // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
   // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
   // if you're using a language detector, do not define the lng option
   fallbackLng: {
-    default: ["zh-CN"],
-    zh: ["zh-CN"],
+    default: ['zh-CN'],
+    zh: ['zh-CN'],
   },
-  supportedLngs: ["zh-CN", "en"],
+  supportedLngs: ['zh-CN', 'en'],
   interpolation: {
     escapeValue: false, // react already safes from xss
   },
@@ -28,13 +28,13 @@ i18next
   .use(initReactI18next) // passes i18n down to react-i18next
   .init(initOptions);
 
-i18next.on("initialized", (options: InitOptions) => {
+i18next.on('initialized', (options: InitOptions) => {
   console.log(options);
 });
 
-i18next.on("languageChanged", (lng: string) => {
+i18next.on('languageChanged', (lng: string) => {
   console.log(lng);
-  if (lng === undefined || lng === null || lng === "") {
+  if (lng === undefined || lng === null || lng === '') {
     return;
   }
   const lowerCaseLng = lng.toLocaleLowerCase();

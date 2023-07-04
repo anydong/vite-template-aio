@@ -1,15 +1,15 @@
-import { LoginFormPage, ProFormText } from "@ant-design/pro-components";
-import { InternalFieldProps } from "rc-field-form/lib/Field";
-import { FC } from "react";
-import { LoginRequest, login } from "../../../services/LoginService.ts";
+import { LoginFormPage, ProFormText } from '@ant-design/pro-components';
+import { InternalFieldProps } from 'rc-field-form/lib/Field';
+import { FC } from 'react';
+import { LoginRequest, login } from '../../../services/LoginService.ts';
 
-const usernameFieldRules: InternalFieldProps["rules"] = [
-  { required: true, message: "请输入用户名" },
-  { min: 3, max: 16, message: "用户名长度在 3 ～ 16 位之间" },
+const usernameFieldRules: InternalFieldProps['rules'] = [
+  { required: true, message: '请输入用户名' },
+  { min: 3, max: 16, message: '用户名长度在 3 ～ 16 位之间' },
 ];
-const passwordFieldRules: InternalFieldProps["rules"] = [
-  { required: true, message: "请输入密码" },
-  { min: 6, message: "密码长度最低为 6 位" },
+const passwordFieldRules: InternalFieldProps['rules'] = [
+  { required: true, message: '请输入密码' },
+  { min: 6, message: '密码长度最低为 6 位' },
 ];
 const LoginPage: FC = () => {
   const submitLoginRequest = async (formData: any) => {

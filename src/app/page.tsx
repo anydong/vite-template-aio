@@ -1,11 +1,11 @@
-import { Button } from "antd";
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { Button } from 'antd';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import dayjs from "dayjs";
-import reactLogo from "../assets/react.svg";
-import "./page.module.css";
-import viteLogo from "/vite.svg";
+import dayjs from 'dayjs';
+import reactLogo from '../assets/react.svg';
+import './page.module.css';
+import viteLogo from '/vite.svg';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,18 +26,14 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>{t("title")}</h1>
+      <h1>{t('title')}</h1>
       <div className="card">
-        <Button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
+        <Button onClick={() => setCount((count) => count + 1)}>count is {count}</Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
     </>
   );
 }

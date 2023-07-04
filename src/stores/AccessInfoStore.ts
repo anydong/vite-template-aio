@@ -1,5 +1,5 @@
-import { create } from "zustand";
-import { createJSONStorage, persist } from "zustand/middleware";
+import { create } from 'zustand';
+import { createJSONStorage, persist } from 'zustand/middleware';
 
 interface AccessInfo {
   token: string;
@@ -25,8 +25,8 @@ const useAccessInfoStore = create<UseAccessInfoStore>()(
           return { accessInfo: undefined };
         }),
     }),
-    { name: "access_info", storage: createJSONStorage(() => localStorage) }
-  )
+    { name: 'access_info', storage: createJSONStorage(() => localStorage) },
+  ),
 );
 
 export default useAccessInfoStore;
