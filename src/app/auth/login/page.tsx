@@ -1,7 +1,7 @@
+import { LoginRequest, login } from '@/services/LoginService.ts';
 import { LoginFormPage, ProFormText } from '@ant-design/pro-components';
 import { InternalFieldProps } from 'rc-field-form/lib/Field';
 import { FC } from 'react';
-import { LoginRequest, login } from '../../../services/LoginService.ts';
 
 const usernameFieldRules: InternalFieldProps['rules'] = [
   { required: true, message: '请输入用户名' },
