@@ -5,8 +5,8 @@ import AuthLayout from '@/layouts/AuthLayout';
 import BasicLayout from '@/layouts/BasicLayout';
 
 /* eslint-disable react-refresh/only-export-components */
-const App = lazy(() => import('@/app/page'));
-const LoginPage = lazy(() => import('@/app/auth/login/page'));
+const App = lazy(() => import('@/pages/index'));
+const LoginPage = lazy(() => import('@/pages/login'));
 /* eslint-enable */
 
 const routes: RouteObject[] = [
