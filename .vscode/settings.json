@@ -1,0 +1,4 @@
+{
+  "json.validate.enable": true,
+  "prettier.documentSelectors": ["**/*.json"]
+}
