@@ -3,7 +3,7 @@ import { ConfigProvider } from 'antd';
 import { FC } from 'react';
 import { Outlet } from 'react-router-dom';
 
-const AuthLayout: FC = () => {
+const Index: FC = () => {
   const proSettings: ProSettings = {
     layout: 'top',
     fixedHeader: true,
@@ -26,4 +26,4 @@ const AuthLayout: FC = () => {
     </ProConfigProvider>
   );
 };
-export default AuthLayout;
+export default Index;
