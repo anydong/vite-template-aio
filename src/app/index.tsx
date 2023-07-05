@@ -1,9 +1,5 @@
-import loadable from '@loadable/component';
+import { lazy } from 'react';
 
-const fallback = <div>Loading...</div>;
+export const App = lazy(() => import('@/app/page'));
 
-export const App = loadable(() => import('@/app/page'), { fallback });
-
-export const LoginPage = loadable(() => import('@/app/auth/login/page'), {
-  fallback,
-});
+export const LoginPage = lazy(() => import('@/app/auth/login/page'));
