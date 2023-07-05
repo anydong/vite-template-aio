@@ -14,4 +14,10 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': 'warn',
   },
+  settings: {
+    react: {
+      pragma: 'React',
+      version: 'detect',
+    },
+  },
 };
