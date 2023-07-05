@@ -8,7 +8,7 @@
     "dev": "vite",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint-staged": "lint-staged",
-    "prepare": "concurrently \"husky install\"",
+    "prepare": "husky install",
     "preview": "vite preview",
     "release": "release-it",
     "update": "npx npm-check-updates -u && npm install && npm run build"
@@ -38,7 +38,6 @@
     "@typescript-eslint/eslint-plugin": "5.61.0",
     "@typescript-eslint/parser": "5.61.0",
     "@vitejs/plugin-react": "4.0.1",
-    "concurrently": "8.2.0",
     "eslint": "8.44.0",
     "eslint-config-alloy": "5.0.0",
     "eslint-plugin-react": "7.32.2",
