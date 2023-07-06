@@ -1,5 +1,5 @@
 {
-  "package.json": ["npx prettier --write"],
+  "package.json": ["prettier --parser=json --write"],
   "*.{js,jsx,less,md,json}": ["prettier --write"],
   "*.ts?(x)": ["prettier --parser=typescript --write"]
 }
