@@ -28,18 +28,12 @@ i18next
   .use(initReactI18next) // passes i18n down to react-i18next
   .init(initOptions);
 
-i18next.on('initialized', (options: InitOptions) => {
-  console.log(options);
-});
-
 i18next.on('languageChanged', (lng: string) => {
-  console.log(lng);
-  if (lng === undefined || lng === null || lng === '') {
-    return;
+  if ('zh-CN' === lng) {
+    dayjs.locale('zh-cn');
+  } else if ('en' === lng) {
+    dayjs.locale('en');
   }
-  const lowerCaseLng = lng.toLocaleLowerCase();
-
-  dayjs.locale(lowerCaseLng);
 });
 
 export default i18next;
