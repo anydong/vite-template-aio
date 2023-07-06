@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import useAccessInfoStore from '../stores/AccessInfoStore';
+import useAccessInfoStore from '@/stores/AccessInfoStore';
 
 const client = axios.create({});
 

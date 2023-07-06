@@ -1,4 +1,4 @@
-import client from '../libs/request.ts';
+import client from '@/libs/request';
 
 export interface LoginRequest {
   username: string;
