@@ -1,5 +1,5 @@
 import { Button } from 'antd';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import reactLogo from '@/assets/react.svg';
@@ -7,7 +7,7 @@ import reactLogo from '@/assets/react.svg';
 import './index.css';
 import viteLogo from '/vite.svg';
 
-function App() {
+const App: FC = () => {
   const [count, setCount] = useState(0);
   const { t } = useTranslation();
 
@@ -31,6 +31,6 @@ function App() {
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
     </>
   );
-}
+};
 
 export default App;
