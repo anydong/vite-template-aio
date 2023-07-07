@@ -1,18 +1,9 @@
 import { LoginFormPage, ProFormText } from '@ant-design/pro-components';
-import type { FormRule } from 'antd';
 import { Form } from 'antd';
 import { FC } from 'react';
 
-import { LoginRequest, login } from '@/services/LoginService';
+import { LoginRequest, LoginRequestFormRule, login } from '@/services/LoginService';
 
-const usernameFieldRules: FormRule[] = [
-  { required: true, message: '请输入用户名' },
-  { min: 3, max: 16, message: '用户名长度在 3 ～ 16 位之间' },
-];
-const passwordFieldRules: FormRule[] = [
-  { required: true, message: '请输入密码' },
-  { min: 6, message: '密码长度最低为 6 位' },
-];
 const LoginPage: FC = () => {
   const [loginForm] = Form.useForm();
   const submitLoginRequest = async (formData: any) => {
@@ -35,7 +26,7 @@ const LoginPage: FC = () => {
       <ProFormText
         name="username"
         label="用户名"
-        rules={usernameFieldRules}
+        rules={LoginRequestFormRule.username}
         formItemProps={{
           required: false,
         }}
@@ -43,7 +34,7 @@ const LoginPage: FC = () => {
       <ProFormText.Password
         name="password"
         label="密码"
-        rules={passwordFieldRules}
+        rules={LoginRequestFormRule.password}
         formItemProps={{
           required: false,
         }}
