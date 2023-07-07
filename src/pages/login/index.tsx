@@ -2,7 +2,7 @@ import { LoginFormPage, ProFormText } from '@ant-design/pro-components';
 import { Form } from 'antd';
 import { FC } from 'react';
 
-import { LoginRequest, LoginRequestFormRule, login } from '@/services/LoginService';
+import { LoginRequest, LoginRequestFormRule, login } from '@/api/LoginApi';
 
 const LoginPage: FC = () => {
   const [loginForm] = Form.useForm();

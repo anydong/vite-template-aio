@@ -1,6 +1,7 @@
 import type { FormRule } from 'antd';
 
 import client from '@/libs/request';
+import { AxiosResponse } from 'axios';
 
 export interface LoginRequest {
   username: string;
@@ -18,6 +19,6 @@ export const LoginRequestFormRule: Record<keyof LoginRequest, FormRule[]> = {
   ],
 };
 
-export const login = async (request: LoginRequest) => {
+export const login = async (request: LoginRequest): Promise<AxiosResponse<Response>> => {
   return client.post('/auth/login', request);
 };
