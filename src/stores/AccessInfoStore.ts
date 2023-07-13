@@ -9,6 +9,7 @@ interface AccessInfo {
 interface UseAccessInfoStore {
   accessInfo?: AccessInfo;
   setAccessInfo: (accessInfo: AccessInfo) => void;
+  setToken: (token: string) => void;
   removeAccessInfo: () => void;
 }
 
@@ -19,6 +20,10 @@ const useAccessInfoStore = create<UseAccessInfoStore>()(
       setAccessInfo: (accessInfo) =>
         set(() => {
           return { accessInfo: accessInfo };
+        }),
+      setToken: (token) =>
+        set((state) => {
+          return { accessInfo: { ...state?.accessInfo, token: token } };
         }),
       removeAccessInfo: () =>
         set(() => {
