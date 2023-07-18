@@ -1,5 +1,7 @@
 {
-  "package.json": ["prettier --write"],
-  "*.{js,jsx,less,md,json}": ["prettier --write"],
-  "*.ts?(x)": ["prettier --write"]
+  "package.json": ["prettier --write --ignore-unknown"],
+  "*.{md}": ["prettier --write --ignore-unknown"],
+  "*.{json}": ["prettier --write --ignore-unknown"],
+  "*.{js,jsx}": ["prettier --write --ignore-unknown"],
+  "*.{ts,tsx}": ["prettier --write --ignore-unknown"]
 }

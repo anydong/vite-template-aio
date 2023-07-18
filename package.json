@@ -9,6 +9,7 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint-staged": "lint-staged",
     "prepare": "husky install",
+    "prettier": "prettier src --write --ignore-unknown",
     "preview": "vite preview",
     "release": "release-it",
     "update": "npx npm-check-updates -u && npm install && npm run build"
