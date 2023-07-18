@@ -29,9 +29,9 @@ i18next
   .init(initOptions);
 
 i18next.on('languageChanged', (lng: string) => {
-  if ('zh-CN' === lng) {
+  if (lng === 'zh-CN') {
     dayjs.locale('zh-cn');
-  } else if ('en' === lng) {
+  } else if (lng === 'en') {
     dayjs.locale('en');
   }
 });
