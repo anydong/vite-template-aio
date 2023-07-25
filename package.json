@@ -16,9 +16,9 @@
   },
   "dependencies": {
     "@ant-design/icons": "5.1.4",
-    "@ant-design/pro-components": "2.6.7",
+    "@ant-design/pro-components": "2.6.8",
     "ahooks": "3.7.8",
-    "antd": "5.7.2",
+    "antd": "5.7.3",
     "axios": "1.4.0",
     "dayjs": "1.11.9",
     "i18next": "23.2.11",
@@ -34,7 +34,7 @@
     "@commitlint/cli": "17.6.7",
     "@commitlint/config-conventional": "17.6.7",
     "@types/node": "20.4.4",
-    "@types/react": "18.2.15",
+    "@types/react": "18.2.16",
     "@types/react-dom": "18.2.7",
     "@typescript-eslint/eslint-plugin": "5.61.0",
     "@typescript-eslint/parser": "5.61.0",
@@ -51,6 +51,6 @@
     "prettier-plugin-packagejson": "2.4.5",
     "release-it": "16.1.3",
     "typescript": "5.1.6",
-    "vite": "4.4.6"
+    "vite": "4.4.7"
   }
 }
