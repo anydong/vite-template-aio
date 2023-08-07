@@ -1,3 +1,4 @@
+import { ThemeProvider, createTheme } from '@mui/system';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
@@ -10,8 +11,12 @@ import '@/locale';
 import 'antd/dist/reset.css';
 import './global.css';
 
+const theme = createTheme();
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>,
 );

@@ -1,4 +1,5 @@
 import { Icon } from '@iconify/react';
+import { Box } from '@mui/system';
 import { Button } from 'antd';
 import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -31,12 +32,14 @@ const App: FC = () => {
       </div>
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
 
-      <Button>
-        <Icon icon="material-symbols:refresh" fontSize={22} />
-      </Button>
-      <Button>
-        <Icon icon="ri:refresh-line" fontSize={22} />
-      </Button>
+      <Box sx={{ mt: 1 }}>
+        <Button>
+          <Icon icon="material-symbols:refresh" fontSize={22} />
+        </Button>
+        <Button>
+          <Icon icon="ri:refresh-line" fontSize={22} />
+        </Button>
+      </Box>
     </>
   );
 };
