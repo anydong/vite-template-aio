@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react';
 import { Button } from 'antd';
 import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -29,6 +30,13 @@ const App: FC = () => {
         </p>
       </div>
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+
+      <Button>
+        <Icon icon="material-symbols:refresh" fontSize={22} />
+      </Button>
+      <Button>
+        <Icon icon="ri:refresh-line" fontSize={22} />
+      </Button>
     </>
   );
 };
