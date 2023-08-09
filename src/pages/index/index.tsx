@@ -1,4 +1,4 @@
-import { Icon } from '@iconify/react';
+import Iconify from '@/components/Iconify';
 import { Box } from '@mui/system';
 import { Button } from 'antd';
 import { FC, useState } from 'react';
@@ -33,12 +33,7 @@ const App: FC = () => {
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
 
       <Box sx={{ mt: 1 }}>
-        <Button>
-          <Icon icon="material-symbols:refresh" fontSize={22} />
-        </Button>
-        <Button>
-          <Icon icon="ri:refresh-line" fontSize={22} />
-        </Button>
+        <Button icon={<Iconify icon="material-symbols:refresh" />} />
       </Box>
     </>
   );
