@@ -11,7 +11,9 @@ import '@/locale';
 import 'antd/dist/reset.css';
 import './global.css';
 
-const theme = createTheme();
+const theme = createTheme({
+  spacing: 8,
+});
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
