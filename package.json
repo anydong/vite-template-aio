@@ -6,6 +6,9 @@
   "scripts": {
     "build": "tsc && vite build",
     "dev": "vite",
+    "docs:build": "vitepress build docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:preview": "vitepress preview docs",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint-staged": "lint-staged",
     "prepare": "husky install",
@@ -54,6 +57,7 @@
     "prettier-plugin-packagejson": "2.4.5",
     "release-it": "16.1.4",
     "typescript": "5.1.6",
-    "vite": "4.4.9"
+    "vite": "4.4.9",
+    "vitepress": "1.0.0-rc.4"
   }
 }
