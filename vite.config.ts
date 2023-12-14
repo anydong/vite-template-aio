@@ -10,4 +10,14 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          antd: ['antd'],
+          i18next: ['i18next', 'i18next-browser-languagedetector', 'i18next-http-backend'],
+        },
+      },
+    },
+  },
 });
