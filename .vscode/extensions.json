@@ -1,3 +1,8 @@
 {
-  "recommendations": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint", "drknoxy.eslint-disable-snippets"]
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "drknoxy.eslint-disable-snippets",
+    "bradlc.vscode-tailwindcss"
+  ]
 }
