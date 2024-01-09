@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import reactLogo from "@/assets/react.svg";
 
+import LocaleSelector from "@/components/LocaleSelector";
 import "./index.css";
 import viteLogo from "/vite.svg";
 
@@ -23,6 +24,9 @@ const App: FC = () => {
         </a>
       </div>
       <h1>{t("title")}</h1>
+      <div>
+        <LocaleSelector />
+      </div>
       <div className="p-8">
         <Button icon={<Iconify icon="ic:outline-exposure-plus-1" />} onClick={() => setCount((count) => count + 1)}>
           count is {count}

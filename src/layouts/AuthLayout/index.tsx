@@ -1,16 +1,17 @@
-import { ProConfigProvider, ProLayout, ProLayoutProps, ProSettings } from '@ant-design/pro-components';
-import { ConfigProvider } from 'antd';
-import { FC } from 'react';
-import { Outlet } from 'react-router-dom';
+import { ProConfigProvider, ProLayout, ProLayoutProps, ProSettings } from "@ant-design/pro-components";
+import { ConfigProvider } from "antd";
+import zhCn from "antd/locale/zh_CN";
+import { FC } from "react";
+import { Outlet } from "react-router-dom";
 
 const Index: FC = () => {
   const proSettings: ProSettings = {
-    layout: 'top',
+    layout: "top",
     fixedHeader: true,
     suppressSiderWhenMenuEmpty: true,
   };
   const proLayoutProps: ProLayoutProps = {
-    title: 'Admin Panel',
+    title: "Admin Panel",
     token: {},
     onPageChange: (location) => {
       console.log(location);
@@ -18,7 +19,7 @@ const Index: FC = () => {
   };
   return (
     <ProConfigProvider>
-      <ConfigProvider>
+      <ConfigProvider locale={zhCn} theme={{ cssVar: true, hashed: false }}>
         <ProLayout {...proLayoutProps} {...proSettings}>
           <Outlet />
         </ProLayout>
