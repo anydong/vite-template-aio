@@ -1,12 +1,12 @@
-import Iconify from '@/components/Iconify';
-import { Button } from 'antd';
-import { FC, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import Iconify from "@/components/Iconify";
+import { Button } from "antd";
+import { FC, useState } from "react";
+import { useTranslation } from "react-i18next";
 
-import reactLogo from '@/assets/react.svg';
+import reactLogo from "@/assets/react.svg";
 
-import './index.css';
-import viteLogo from '/vite.svg';
+import "./index.css";
+import viteLogo from "/vite.svg";
 
 const App: FC = () => {
   const [count, setCount] = useState(0);
@@ -22,8 +22,8 @@ const App: FC = () => {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>{t('title')}</h1>
-      <div className="card">
+      <h1>{t("title")}</h1>
+      <div className="p-8">
         <Button icon={<Iconify icon="ic:outline-exposure-plus-1" />} onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </Button>
