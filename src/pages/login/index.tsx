@@ -1,10 +1,11 @@
-import { LoginFormPage, ProFormText } from '@ant-design/pro-components';
-import { Form } from 'antd';
-import { FC } from 'react';
+import { LoginFormPage, ProFormText } from "@ant-design/pro-components";
+import { Form } from "antd";
+import type { FC } from "react";
 
-import { LoginRequest, LoginRequestFormRule, login } from '@/api/LoginApi';
+import type { LoginRequest } from "@/api/LoginApi";
+import { LoginRequestFormRule, login } from "@/api/LoginApi";
 
-const LoginPage: FC = () => {
+export const Component: FC = () => {
   const [loginForm] = Form.useForm();
   const submitLoginRequest = async (formData: any) => {
     const request: LoginRequest = {
@@ -42,5 +43,3 @@ const LoginPage: FC = () => {
     </LoginFormPage>
   );
 };
-
-export default LoginPage;

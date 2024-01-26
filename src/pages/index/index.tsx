@@ -9,7 +9,7 @@ import LocaleSelector from "@/components/LocaleSelector";
 import "./index.css";
 import viteLogo from "/vite.svg";
 
-const App: FC = () => {
+export const Component: FC = () => {
   const [count, setCount] = useState(0);
   const { t } = useTranslation();
 
@@ -39,5 +39,3 @@ const App: FC = () => {
     </>
   );
 };
-
-export default App;

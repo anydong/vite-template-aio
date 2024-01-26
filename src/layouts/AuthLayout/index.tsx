@@ -1,10 +1,11 @@
-import { ProConfigProvider, ProLayout, ProLayoutProps, ProSettings } from "@ant-design/pro-components";
+import type { ProLayoutProps, ProSettings } from "@ant-design/pro-components";
+import { ProConfigProvider, ProLayout } from "@ant-design/pro-components";
 import { ConfigProvider } from "antd";
 import zhCn from "antd/locale/zh_CN";
-import { FC } from "react";
+import type { FC } from "react";
 import { Outlet } from "react-router-dom";
 
-const Index: FC = () => {
+export const Component: FC = () => {
   const proSettings: ProSettings = {
     layout: "top",
     fixedHeader: true,
@@ -27,4 +28,3 @@ const Index: FC = () => {
     </ProConfigProvider>
   );
 };
-export default Index;
