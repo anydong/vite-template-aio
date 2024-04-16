@@ -28,7 +28,7 @@ export const Component: FC = () => {
         <LocaleSelector />
       </div>
       <div className="p-8">
-        <Button icon={<Iconify icon="ic:outline-exposure-plus-1" />} onClick={() => setCount((count) => count + 1)}>
+        <Button icon={<Iconify icon="lucide:plus" />} onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </Button>
         <p>

@@ -1,11 +1,9 @@
-import { Icon, IconProps } from '@iconify/react';
-import { FC } from 'react';
-
-import styles from './index.module.css';
+import { Icon, IconProps } from "@iconify/react";
+import { FC } from "react";
 
 const Iconify: FC<IconProps> = (props) => {
   return (
-    <span role="img" className={styles.anticon}>
+    <span role="img" className="anticon">
       <Icon {...props} />
     </span>
   );
