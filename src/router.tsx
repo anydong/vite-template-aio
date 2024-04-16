@@ -16,16 +16,6 @@ const routes: RouteObject[] = [
     lazy: () => import("@/layouts/BasicLayout"),
     children: [],
   },
-  {
-    path: "/",
-    lazy: () => import("@/layouts/AuthLayout"),
-    children: [
-      {
-        path: "login",
-        lazy: () => import("@/pages/login"),
-      },
-    ],
-  },
 ];
 
 const router = createBrowserRouter(routes);
