@@ -1,15 +1,18 @@
-import Iconify from "@/components/Iconify";
+import { createLazyFileRoute } from "@tanstack/react-router";
 import { Button } from "antd";
-import { FC, useState } from "react";
+import type { FC } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import reactLogo from "@/assets/react.svg";
-
+import Iconify from "@/components/Iconify";
 import LocaleSelector from "@/components/LocaleSelector";
+
 import "./index.css";
+
 import viteLogo from "/vite.svg";
 
-export const Component: FC = () => {
+const Component: FC = () => {
   const [count, setCount] = useState(0);
   const { t } = useTranslation();
 
@@ -39,3 +42,7 @@ export const Component: FC = () => {
     </>
   );
 };
+
+export const Route = createLazyFileRoute("/")({
+  component: Component,
+});
