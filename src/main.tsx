@@ -7,7 +7,6 @@ import { routeTree } from "./routeTree.gen";
 
 import "@/locale";
 
-import "antd/dist/reset.css";
 import "./global.css";
 
 // Create a new router instance

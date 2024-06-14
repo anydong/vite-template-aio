@@ -1,3 +1,4 @@
+import { StyleProvider } from "@ant-design/cssinjs";
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { App, ConfigProvider } from "antd";
 import zhCn from "antd/locale/zh_CN";
@@ -18,11 +19,13 @@ const TanStackRouterDevtools =
 export const Route = createRootRoute({
   component: () => (
     <>
-      <ConfigProvider locale={zhCn} theme={{ cssVar: true, hashed: false }}>
-        <App>
-          <Outlet />
-        </App>
-      </ConfigProvider>
+      <StyleProvider layer>
+        <ConfigProvider locale={zhCn} theme={{ cssVar: true, hashed: false }}>
+          <App>
+            <Outlet />
+          </App>
+        </ConfigProvider>
+      </StyleProvider>
       <Suspense>
         <TanStackRouterDevtools position="bottom-right" />
       </Suspense>
