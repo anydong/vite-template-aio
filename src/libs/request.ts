@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
-import useAccessInfoStore from '@/stores/AccessInfoStore';
+import useAccessInfoStore from "@/stores/AccessInfoStore";
 
 const client = axios.create({});
 
@@ -9,7 +9,7 @@ client.interceptors.request.use(
   (config) => {
     const accessInfo = useAccessInfoStore.getState().accessInfo;
     if (accessInfo !== undefined && accessInfo !== null) {
-      config.headers['Authorization'] = `Bearer ${accessInfo.token}`;
+      config.headers.Authorization = `Bearer ${accessInfo.token}`;
     }
     return config;
   },

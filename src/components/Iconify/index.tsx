@@ -1,5 +1,5 @@
-import { Icon, IconProps } from "@iconify/react";
-import { FC } from "react";
+import { Icon, type IconProps } from "@iconify/react";
+import type { FC } from "react";
 
 const Iconify: FC<IconProps> = (props) => {
   return (

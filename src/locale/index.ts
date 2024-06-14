@@ -1,4 +1,4 @@
-import i18next, { InitOptions } from "i18next";
+import i18next, { type InitOptions } from "i18next";
 import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
 import I18NextHttpBackend from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
