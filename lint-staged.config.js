@@ -1,9 +1,9 @@
 export default {
-  "**/*.js?(x)": (filenames) => filenames.map((filename) => `prettier --write --ignore-unknown '${filename}'`),
-  "**/*.ts?(x)": (filenames) => filenames.map((filename) => `prettier --write --ignore-unknown '${filename}'`),
+  "**/*.js?(x)": (filenames) => filenames.map((filename) => `biome format --write '${filename}'`),
+  "**/*.ts?(x)": (filenames) => filenames.map((filename) => `biome format --write '${filename}'`),
   "**/*.css": ["stylelint --fix"],
 
-  "package.json": ["prettier --write --ignore-unknown"],
-  "*.md": ["prettier --write --ignore-unknown"],
-  "*.json": ["prettier --write --ignore-unknown"],
+  "package.json": ["biome format --write"],
+  "*.md": ["biome format --write"],
+  "*.json": ["biome format --write"],
 };
