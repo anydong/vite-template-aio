@@ -18,6 +18,7 @@ const Component: FC = () => {
 
   return (
     <>
+      <h1>ha</h1>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
