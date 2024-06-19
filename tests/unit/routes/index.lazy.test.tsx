@@ -1,8 +1,8 @@
-import { test, expect } from "vitest";
+import { RouterProvider, createMemoryHistory, createRouter } from "@tanstack/react-router";
 import { render } from "@testing-library/react";
-import { createRouter, RouterProvider, createMemoryHistory } from "@tanstack/react-router";
+import { expect, test } from "vitest";
 
-import { routeTree } from "../../src/routeTree.gen";
+import { routeTree } from "../../../src/routeTree.gen";
 
 const memoryHistory = createMemoryHistory({
   initialEntries: ["/"], // Pass your initial url
