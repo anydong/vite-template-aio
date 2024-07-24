@@ -1,8 +1,8 @@
 /// <reference types="vitest" />
 
+import path from "node:path";
 import { TanStackRouterVite } from "@tanstack/router-vite-plugin";
 import react from "@vitejs/plugin-react";
-import path from "node:path";
 import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
@@ -28,5 +28,11 @@ export default defineConfig({
     globals: true,
     setupFiles: ["./vitest.setup.ts"],
     css: true,
+    browser: {
+      provider: "playwright", // or 'webdriverio'
+      enabled: false,
+      headless: true,
+      name: "chromium", // browser name is required
+    },
   },
 });
