@@ -17,7 +17,7 @@ const Component: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <>
+    <div style={{ textAlign: "center" }}>
       <h1>ha</h1>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
@@ -40,7 +40,7 @@ const Component: FC = () => {
         </p>
       </div>
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </>
+    </div>
   );
 };
 
