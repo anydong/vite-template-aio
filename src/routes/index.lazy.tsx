@@ -1,4 +1,4 @@
-import { createLazyFileRoute } from "@tanstack/react-router";
+import { Link, createLazyFileRoute } from "@tanstack/react-router";
 import { Button } from "antd";
 import type { FC } from "react";
 import { useState } from "react";
@@ -13,12 +13,15 @@ import "./index.css";
 import viteLogo from "/vite.svg";
 
 const Component: FC = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState<number>(0);
   const { t } = useTranslation();
 
   return (
     <div style={{ textAlign: "center" }}>
       <h1>ha</h1>
+      <Link to={"/about"} params={{}} search={{}}>
+        About
+      </Link>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
