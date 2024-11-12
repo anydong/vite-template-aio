@@ -1,5 +1,5 @@
 import { StyleProvider } from "@ant-design/cssinjs";
-import { Outlet, createRootRoute } from "@tanstack/react-router";
+import { Link, Outlet, createRootRoute } from "@tanstack/react-router";
 import { App, ConfigProvider } from "antd";
 import zhCn from "antd/locale/zh_CN";
 import React, { Suspense } from "react";
@@ -17,18 +17,28 @@ const TanStackRouterDevtools =
       );
 
 export const Route = createRootRoute({
-  component: () => (
-    <>
-      <StyleProvider layer>
-        <ConfigProvider locale={zhCn} theme={{ cssVar: true, hashed: false }}>
-          <App>
-            <Outlet />
-          </App>
-        </ConfigProvider>
-      </StyleProvider>
-      <Suspense>
-        <TanStackRouterDevtools position="bottom-right" />
-      </Suspense>
-    </>
-  ),
+  component: () => {
+    return (
+      <>
+        <StyleProvider layer>
+          <ConfigProvider locale={zhCn} theme={{ cssVar: true, hashed: false }}>
+            <App>
+              <Outlet />
+            </App>
+          </ConfigProvider>
+        </StyleProvider>
+        <Suspense>
+          <TanStackRouterDevtools position="bottom-right" />
+        </Suspense>
+      </>
+    );
+  },
+  notFoundComponent: () => {
+    return (
+      <div>
+        <p>Not found!</p>
+        <Link to="/">Go home</Link>
+      </div>
+    );
+  },
 });
