@@ -10,7 +10,7 @@
     "docs:build": "vitepress build docs",
     "docs:dev": "vitepress dev docs",
     "docs:preview": "vitepress preview docs",
-    "lint": "biome check --write src tests",
+    "lint": "biome check --write src tests biome.json package.json",
     "prepare": "lefthook install",
     "release": "release-it",
     "test:unit": "vitest tests/unit --ui",

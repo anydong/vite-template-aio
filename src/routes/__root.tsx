@@ -1,5 +1,5 @@
 import { StyleProvider } from "@ant-design/cssinjs";
-import { Link, Outlet, createRootRoute } from "@tanstack/react-router";
+import { Outlet, createRootRoute } from "@tanstack/react-router";
 import { App, ConfigProvider } from "antd";
 import zhCn from "antd/locale/zh_CN";
 import React, { Suspense } from "react";
@@ -31,14 +31,6 @@ export const Route = createRootRoute({
           <TanStackRouterDevtools position="bottom-right" />
         </Suspense>
       </>
-    );
-  },
-  notFoundComponent: () => {
-    return (
-      <div>
-        <p>Not found!</p>
-        <Link to="/">Go home</Link>
-      </div>
     );
   },
 });
