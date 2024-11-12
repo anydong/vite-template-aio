@@ -1,7 +1,7 @@
 import type { FormRule } from "antd";
 import type { AxiosResponse } from "axios";
 
-import client from "@/libs/request";
+import client from "@/lib/request";
 
 export interface LoginRequest {
   username: string;
