@@ -3,9 +3,6 @@
   "files": {
     "ignore": ["src/routeTree.gen.ts", "tsconfig.app.json", "tsconfig.json", "tsconfig.node.json"]
   },
-  "organizeImports": {
-    "enabled": true
-  },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
@@ -16,5 +13,8 @@
     "rules": {
       "recommended": true
     }
+  },
+  "organizeImports": {
+    "enabled": true
   }
 }

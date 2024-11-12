@@ -18,12 +18,15 @@ const Component: FC = () => {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <h1>ha</h1>
+      <div className="prose">
+        <h1>vite-template-aio</h1>
+      </div>
+
       <Link to={"/about"} params={{}} search={{}}>
         About
       </Link>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
+      <div className="items-center flex flex-col">
+        <a href="https://vite.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank" rel="noreferrer">

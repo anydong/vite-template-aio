@@ -39,6 +39,7 @@
     "@commitlint/config-conventional": "19.5.0",
     "@iconify/react": "5.0.2",
     "@playwright/test": "1.48.2",
+    "@tailwindcss/typography": "0.5.15",
     "@tanstack/router-devtools": "1.81.4",
     "@tanstack/router-plugin": "1.79.0",
     "@testing-library/jest-dom": "6.6.3",
