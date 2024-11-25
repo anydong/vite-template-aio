@@ -1,8 +1,8 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
-    "include": ["src", "tests", "biome.json"],
-    "ignore": ["src/routeTree.gen.ts", "tsconfig.app.json", "tsconfig.json", "tsconfig.node.json"]
+    "include": ["src", "tests", "biome.json", "package.json"],
+    "ignore": ["src/routeTree.gen.ts"]
   },
   "formatter": {
     "enabled": true,
@@ -17,5 +17,10 @@
   },
   "organizeImports": {
     "enabled": true
+  },
+  "json": {
+    "parser": {
+      "allowComments": true
+    }
   }
 }
