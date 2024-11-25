@@ -11,6 +11,7 @@
     "docs:dev": "vitepress dev docs",
     "docs:preview": "vitepress preview docs",
     "lint": "biome check --write --unsafe",
+    "stylelint": "stylelint --fix \"src/**/*.css\"",
     "prepare": "lefthook install",
     "release": "release-it",
     "test:unit": "vitest tests/unit --ui",

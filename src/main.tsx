@@ -6,9 +6,11 @@ import NotFoundComponent from "./components/NotFound";
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen";
 
-import "@/locale";
+// 加载 i18next
+import "./locale";
 
-import "./global.css";
+// 加载全局 css
+import "./main.css";
 
 // Create a new router instance
 const router = createRouter({ routeTree, defaultNotFoundComponent: NotFoundComponent });
