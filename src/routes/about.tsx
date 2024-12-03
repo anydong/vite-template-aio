@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
 
 const aboutSearchSchema = z.object({
-  id: z.string().default("123"),
+  id: z.string().optional().catch("123"),
 });
 
 export type AboutSearch = z.infer<typeof aboutSearchSchema>;
