@@ -1,8 +1,9 @@
-import { createLazyFileRoute } from "@tanstack/react-router";
+import { createLazyFileRoute, useSearch } from "@tanstack/react-router";
 import type { FC } from "react";
 
 const Component: FC = () => {
-  return <div>about</div>;
+  const search = useSearch({ strict: false });
+  return <div>about: {search?.id}</div>;
 };
 
 export const Route = createLazyFileRoute("/about")({
