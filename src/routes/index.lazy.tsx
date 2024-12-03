@@ -22,9 +22,7 @@ const Component: FC = () => {
         <h1>vite-template-aio</h1>
       </div>
 
-      <Link to={"/about"} params={{}} search={{}}>
-        About
-      </Link>
+      <Link to={"/about"}>About</Link>
       <div className="items-center flex flex-col">
         <a href="https://vite.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />

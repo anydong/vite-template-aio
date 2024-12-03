@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 export interface AboutSearch {
-  id: string;
+  id?: string;
 }
 
 export const Route = createFileRoute("/about")({
