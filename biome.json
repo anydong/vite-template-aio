@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
-    "include": ["src", "tests", "biome.json", "package.json"],
+    "include": ["src", "tests", "biome.json", "package.json", "vite.config.ts", "vitest.config.ts"],
     "ignore": ["src/routeTree.gen.ts"]
   },
   "formatter": {
