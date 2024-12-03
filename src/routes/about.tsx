@@ -1,15 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { z } from "zod";
 
-export interface AboutSearch {
-  id?: string;
-}
+const aboutSearchSchema = z.object({
+  id: z.string().default("123"),
+});
+
+export type AboutSearch = z.infer<typeof aboutSearchSchema>;
 
 export const Route = createFileRoute("/about")({
-  params: {},
-  validateSearch: (search: Record<string, unknown>): AboutSearch => {
-    console.log("validateSearch");
-    return { id: (search?.id as string) || "123" };
-  },
+  validateSearch: aboutSearchSchema,
   loader: async ({ params }) => {
     console.log("loader");
     console.log(params);
