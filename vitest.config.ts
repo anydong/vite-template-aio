@@ -6,10 +6,10 @@ const vitestConfig = defineConfig({
     environment: "jsdom",
     globals: true,
     setupFiles: ["./vitest.setup.ts"],
-    css: true,
+    css: { include: /.+/ },
     browser: {
-      provider: "playwright", // or 'webdriverio'
       enabled: false,
+      provider: "playwright", // or 'webdriverio'
       headless: true,
       name: "chromium", // browser name is required
     },
