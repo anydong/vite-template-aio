@@ -3,6 +3,8 @@ import qs from "query-string";
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+import "@ant-design/v5-patch-for-react-19";
+
 import NotFoundComponent from "./components/NotFound";
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen";
