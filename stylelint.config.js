@@ -1,12 +1,12 @@
 /** @type {import('stylelint').Config} */
 export default {
-  extends: ["stylelint-config-standard", "stylelint-config-tailwindcss"],
+  extends: ["stylelint-config-standard"],
   rules: {
     "block-no-empty": true,
     "at-rule-no-unknown": [
       true,
       {
-        ignoreAtRules: ["tailwind", "apply", "variants", "responsive", "screen", "theme"],
+        ignoreAtRules: ["theme", "plugin", "source"],
       },
     ],
     "custom-property-pattern": "^(breakpoint-.+)$",
