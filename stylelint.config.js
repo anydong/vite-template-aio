@@ -6,7 +6,17 @@ export default {
     "at-rule-no-unknown": [
       true,
       {
-        ignoreAtRules: ["theme", "plugin", "source"],
+        ignoreAtRules: [
+          "theme",
+          "source",
+          "utility",
+          "variant",
+          "custom-variant",
+          "apply",
+          "reference",
+          "config",
+          "plugin",
+        ],
       },
     ],
     "custom-property-pattern": "^(breakpoint-.+)$",
