@@ -1,12 +1,10 @@
 @layer theme, base, antd, components, utilities;
 
-@import url("tailwindcss/theme.css") layer(theme) source(none);
-@import url("tailwindcss/preflight.css") layer(base) source(none);
-@import url("tailwindcss/utilities.css") layer(utilities) source(none);
+@import url("tailwindcss/theme.css") layer(theme);
+@import url("tailwindcss/preflight.css") layer(base);
+@import url("tailwindcss/utilities.css") layer(utilities);
 
 @plugin "@tailwindcss/typography";
-
-@source "../src";
 
 @theme {
   --breakpoint-*: initial;
