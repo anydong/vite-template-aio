@@ -1,5 +1,5 @@
 import { StyleProvider } from "@ant-design/cssinjs";
-import { Outlet, createRootRoute } from "@tanstack/react-router";
+import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { App, ConfigProvider } from "antd";
 import zhCn from "antd/locale/zh_CN";
 import React, { Suspense } from "react";

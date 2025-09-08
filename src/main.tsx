@@ -1,4 +1,4 @@
-import { RouterProvider, createRouter } from "@tanstack/react-router";
+import { createRouter, RouterProvider } from "@tanstack/react-router";
 import qs from "query-string";
 import React from "react";
 import ReactDOM from "react-dom/client";
